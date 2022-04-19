@@ -25,7 +25,8 @@ SECRET_KEY = '075u-q_+i&w%7zvbvl^540@ir5(x#-l0lhg&a@ou&d-6i%a%n)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["ytvid-downloader.herokuapp.com"]
+ALLOWED_HOSTS = ["ytvid-downloader.herokuapp.com",
+                'youtubelink.azurewebsites.net']
 
 
 # Application definition
@@ -119,7 +120,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
+STATIC_URL = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_URL = '/static/'
 STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
 
